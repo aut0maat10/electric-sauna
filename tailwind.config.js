@@ -3,6 +3,13 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        'catamaran': ["Catamaran", "sans-serif"],
+        'rubik-mono': ["Rubik Mono One", "sans-serif"]
+      },
+      fontSize: {
+        'xxl': '12rem',
+      },
       backgroundImage: theme => ({
         'hero': "url('../assets/mixing-console.jpg')",
       }),
