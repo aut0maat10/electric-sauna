@@ -12,7 +12,6 @@ module.exports = {
       },
       backgroundImage: {
         'hero': "url('../assets/mixing-console.jpg')",
-        'robin': "url('../assets/robin-rock-shop.jpg')",
       },
     },
   },
