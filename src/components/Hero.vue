@@ -1,10 +1,10 @@
 <template>
-  <div class="bg-hero bg-no-repeat bg-cover w-full h-screen p-10 grid md:gap-5 grid-cols-2 md:grid-cols-6 grid-flow-row-dense content-center items-center">
+  <div class="bg-hero bg-no-repeat bg-cover w-full h-5/6 lg:h-screen p-5 lg:p-10 grid md:gap-5 grid-cols-2 md:grid-cols-6 grid-flow-row-dense content-center items-center">
   <!-- <div class="bg-hero bg-no-repeat bg-cover flex flex-col justify-center w-full h-screen"> -->
     <h1 class="font-rubik-mono tracking-tighter text-4xl xl:text-7xl font-black text-white text-left leading-[1rem] justify-self-start col-span-2 md:col-span-6">ELECTRIC<br>SAUNA<br>PRODUCTIONS</h1>
     <p v-if="notMobile" class="col-span-2 font-catamaran text-sm xl:text-xl text-white text-left p-1 align-self-start justify-self-start md:justify-self-end">WE MAKE PRODUCTION MUSIC FOR<br>MUSIC LIBRARIES.<br>WE WORK IN VARIOUS STYLES OF<br><span class="text-red-500">ROCK, POP, AND ACOUSTIC MUSIC.</span></p>
     <h2 class="font-catamaran text-8xl lg:text-9xl xl:text-xxl text-left font-black text-red-500 align-self-start justify-self-start md:leading-10 col-span-2 pt-2.5">MUSIC</h2>
-    <ArrowCircleDownIcon v-if="notMobile" class="animate-pulse transform hover:scale-110 col-span-2 w-24 h-24 lg:w-28 lg:h-28 xl:w-36 xl:h-36 text-red-500 hover:text-red-100 justify-self-center align-self-center" @click="testing" />
+    <ArrowCircleDownIcon v-if="notMobile" class="animate-pulse transform hover:scale-110 col-span-2 w-24 h-24 lg:w-28 lg:h-28 xl:w-36 xl:h-36 text-red-500 hover:text-red-100 justify-self-center align-self-center" @click="scrollMusic" />
     <!-- <img class="fill-red-500 justify-self-start" src="../assets/down-arrow.svg" alt="downward pointing arrow"> -->
     <!-- <p class="text-6xl font-rubik-mono text-white align-self-start leading-10">V</p> -->
     <span class="md:col-span-2"></span>
@@ -31,8 +31,9 @@ import { ArrowCircleDownIcon } from '@heroicons/vue/solid'
       }
     },
     methods: {
-      testing() {
-        alert('HELLO')
+      scrollMusic() {
+        const element = document.querySelector('#music-section')
+        element.scrollIntoView({behavior: 'smooth'});
       },
     },
     computed: {
