@@ -10,9 +10,9 @@ module.exports = {
       fontSize: {
         'xxl': '12rem',
       },
-      backgroundImage: theme => ({
+      backgroundImage: {
         'hero': "url('../assets/mixing-console.jpg')",
-      }),
+      },
     },
   },
   variants: {
