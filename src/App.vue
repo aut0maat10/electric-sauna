@@ -28,7 +28,7 @@ export default {
     About,
     Contact,
     Footer,
-  }
+  },
 }
 </script>
 
